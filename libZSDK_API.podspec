@@ -1,28 +1,22 @@
 Pod::Spec.new do |s|
-  s.name         = "libZSDK_API"
-  s.version      = "1.0.0"
-  s.summary      = "Zebra Printer Utility"
-  s.description  = "Zebra Printer Utility"
-  s.homepage     = "http://developer.baidu.com/cloud/push"
-  s.license	     = {
-      :type => 'Copyright',
-      :text => <<-LICENCE
-      Copyright 2019. All rights reserved.
-      LICENCE
-  }
+  s.name             = 'libZSDK_API'
+  s.version          = '1.0.0'
+  s.summary          = 'SDK for MyClient services.'
 
-  s.author       = { 'Baidu Inc' => 'support@baidu.com' }
-  s.source       = { :git => "https://github.com/ankitnetwin/ZSDKAPI.git" }
+  s.description      = &lt;&lt;-DESC
+MySDK does lots of things.
+                       DESC
 
-  s.platform     = :ios, '10.0'
-  s.source_files = 'Zebra/include/*.h'
+  s.homepage         = 'https://github.com/ankitnetwin/ZSDKAPI'
+  s.license          = { :type =&gt; 'Custom', :file =&gt; 'README.md' }
+  s.author           = { 'Renaud Pradenc' =&gt; 'renaud@mywebsite.com' }
+  s.source           = { :git =&gt; 'https://github.com/ankitnetwin/ZSDKAPI.git', :tag =&gt; s.version.to_s }
+
+  s.ios.deployment_target = '8.0'
+
+  s.source_files  = 'Zebra/include/*.{h,m}'
   s.vendored_libraries = 'Zebra/*.a'
 
-  # arc components
-  # s.requires_arc = false
-  # s.preserve_paths = 'Zebra/include/*.h'
-  # s.libraries = 'libZSDK_API'
-  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/#{s.name}/include/**'}
-
-
-end
+  s.requires_arc = true
+end  
+   
