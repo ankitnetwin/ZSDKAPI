@@ -19,10 +19,10 @@ Pod::Spec.new do |s|
   s.vendored_libraries = 'Zebra/*.a'
 
   # arc components
-  s.requires_arc = false
-  s.preserve_paths = 'Zebra/include/*.h'
-  s.libraries = 'libZSDK_API'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/#{s.name}/include/**'}
-  s.preserve_paths = 'L.framework'
+  # s.requires_arc = false
+  # s.preserve_paths = 'Zebra/include/*.h'
+  # s.libraries = 'libZSDK_API'
+  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/#{s.name}/include/**'}
+
 
 end
